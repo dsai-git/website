@@ -16,3 +16,19 @@
     background-color: rgba(0, 0, 0, .3);
     box-shadow: none;
 }
+
+/* blog.html */
+.blog-text {color: #90a4ae;}
+.blog-text:hover{color: #0277bd}
+.header-text {color: #546e7a;font-weight: 200;}
+.sub-header-text {font-weight: 400;}
+.navbar-transparent {background-color: #78909c;}
+.text-info {color: #ee6e73 !important}
+
+/* post.html */
+.post-subtitle {font-size: 1.5rem;}
+.blog-section-header {font-size: 1.4rem;font-weight: 400;}
+.navbar-transparent {background-color: #78909c;}
+.text-info {color: #ee6e73 !important}
+.image-block-orange{width:1000px; height: 365px; background: #ff9800;}
+.image-block-secondary{width:1000px; height: 365px; background: #f4f5f7;}
