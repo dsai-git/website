@@ -7,7 +7,6 @@ tags:
     - ml
 overview: A short preview blurb here
 ---
-# Symbolic AI, return of the prodigal son
 
 **What is Symbolic AI ?** 
 

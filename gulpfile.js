@@ -39,7 +39,7 @@ var paths = {
     src: {
         base: './',
         css:  'assets/css',
-        html: '**/*.html',
+        html: '**/pages/**/*.html',
         img:  'assets/img/**/*.+(png|jpg|gif|svg)',
         js:   'assets/js/**/*.js',
         scss: 'assets/scss/**/*.scss'
