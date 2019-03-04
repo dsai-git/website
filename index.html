@@ -7,15 +7,15 @@
   <meta name="description" content="DSAI is the trusted voice of the profession. We are the global home for data science professionals.">
   <title>DSAI | Data Science and AI Association of Australia</title>
   <!-- Favicon -->
-  <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- Argon CSS -->
-  <link type="text/css" href="assets/css/argon.css?v=1.0.1" rel="stylesheet">
-  <link type="text/css" href="assets/css/dsai.css?v=1.0.0" rel="stylesheet">
+  <link type="text/css" href="/assets/css/argon.css?v=1.0.1" rel="stylesheet">
+  <link type="text/css" href="/assets/css/dsai.css?v=1.0.0" rel="stylesheet">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134852151-1"></script>
@@ -31,10 +31,10 @@
 
 <body>
   <header class="header-global">
-    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-dark bg-default">
       <div class="container">
         <a class="navbar-brand mr-lg-5" href="index.html">
-          <img src="assets/img/brand/data_science_artificial_intelligence.png">
+          <img src="/assets/img/brand/data_science_artificial_intelligence.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,19 +42,47 @@
         <div class="navbar-collapse collapse" id="navbar_global">
           <div class="navbar-collapse-header">
             <div class="row">
-              <div class="col-6 collapse-brand">
+                <div class="col-6 collapse-brand">
                 <a href="index.html">
-                  <img src="assets/img/brand/logo.png">
+                    <img src="/assets/img/brand/logo.png">
                 </a>
-              </div>
-              <div class="col-6 collapse-close">
+                </div>
+                <div class="col-6 collapse-close">
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                  <span></span>
-                  <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-              </div>
+                </div>
             </div>
           </div>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="https://dsai.org.au" target="_blank" data-toggle="tooltip" data-original-title="DSAi Home">
+                  Home
+                  </a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Blog
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbar-default_dropdown_1">
+                      <a class="dropdown-item" href="https://dsai.org.au/blog">Blog</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://dsai.org.au/blog/categories">Categories</a>
+                      <a class="dropdown-item" href="https://dsai.org.au/blog/tags">Tags</a>
+                  </div>        
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/events" target="_blank" data-toggle="tooltip" title="" data-original-title="DSAi Events">
+                  Events
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/team" target="_blank" data-toggle="tooltip" title="" data-original-title="DSAi Team">
+                  Team
+                  </a>
+              </li>
+          </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
             <li class="nav-item">
               <a class="nav-link nav-link-icon" href="https://www.facebook.com/dsai.org.au/" target="_blank" data-toggle="tooltip" title="Join us on Facebook">
@@ -168,7 +196,7 @@
       <div class="container">
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-md-2">
-            <img src="assets/img/meetup/meetup1.jpeg" class="img-fluid floating">
+            <img src="/assets/img/meetup/meetup1.jpeg" class="img-fluid floating">
           </div>
           <div class="col-md-6 order-md-1">
             <div class="pr-md-5">
@@ -188,7 +216,7 @@
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-lg-2 ml-lg-auto">
             <div class="position-relative pl-md-5">
-              <img src="assets/img/ill/ill-2.svg" class="img-center img-fluid">
+              <img src="/assets/img/ill/ill-2.svg" class="img-center img-fluid">
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
@@ -291,22 +319,21 @@
       <div class="row align-items-center justify-content-md-between">
         <div class="col-md-6">
           <div class="copyright">
-            &copy; 2018
-            Data Science and AI Association of Australia
+            &copy; 2019 DSAI | Data Science and AI Association of Australia
           </div>
         </div>
       </div>
     </div>
   </footer>
   <!-- Core -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/popper/popper.min.js"></script>
-  <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-  <script src="assets/vendor/headroom/headroom.min.js"></script>
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/popper/popper.min.js"></script>
+  <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="/assets/vendor/headroom/headroom.min.js"></script>
   <!-- Argon JS -->
-  <script src="assets/js/argon.js?v=1.0.1"></script>
-  <script src="assets/js/animation-plugins.js"></script>
-  <script src="assets/js/animation.js"></script>
+  <script src="/assets/js/argon.js?v=1.0.1"></script>
+  <script src="/assets/js/animation-plugins.js"></script>
+  <script src="/assets/js/animation.js"></script>
 </body>
 
 </html>
