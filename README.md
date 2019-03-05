@@ -1,7 +1,7 @@
 # Installation and development
 
 1. Install npm https://www.npmjs.com/
-2. 'run npm install' in project folder
+2. run 'npm install' in project folder
 3. run 'gulp' in project folder - the browser with a page will open, you are set for viewing and development
 
 ---
