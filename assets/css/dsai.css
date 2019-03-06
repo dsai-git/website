@@ -16,3 +16,9 @@
     background-color: rgba(0, 0, 0, .3);
     box-shadow: none;
 }
+
+.event-title,
+.event-date,
+.event-venue {
+    font-weight: bold !important;
+}
