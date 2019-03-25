@@ -3,14 +3,14 @@
     <title><![CDATA[DSAI | Data Science and AI Association of Australia]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-03-26T09:56:36+12:00</updated>
+    <updated>2019-03-26T10:21:06+12:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Symbolic AI, return of the prodigal son]]></title>
-            <link href="/2018/03/01/symbolic-ai-return-of-the-prodigal-son/"/>
-            <updated>2018-03-01T00:00:00+12:00</updated>
-            <id>/2018/03/01/symbolic-ai-return-of-the-prodigal-son/</id>
+            <link href="/2018/03/26/symbolic-ai-return-of-the-prodigal-son/"/>
+            <updated>2018-03-26T00:00:00+12:00</updated>
+            <id>/2018/03/26/symbolic-ai-return-of-the-prodigal-son/</id>
             <content type="html"><![CDATA[<p><strong>What is Symbolic AI ?</strong></p>
 
 <p>As humans, we represent the world around us through high level concepts. For example,  words like 'Trees', 'Flowers', 'Skyscrapers' are symbols that stand for something or someone.  The essence of symbolic AI is reasoning through relationships among high level concepts, such as “All men are mortal; Caius is a man; therefore Caius is mortal – associating mortality with all men. However, it is quite labour  intensive, as a human has to encode these high level concepts and their relationship into rules. These rules are encoded as if then statements.</p>
