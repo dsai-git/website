@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[DSAI | Data Science and AI Association of Australia]]></title>
-    <link href="/blog/tags/symbolic-ai.xml" rel="self"/>
+    <link href="/tags/symbolic-ai.xml" rel="self"/>
     <link href="/"/>
-    <updated>2019-03-26T10:21:06+12:00</updated>
+    <updated>2019-03-26T13:03:13+12:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
