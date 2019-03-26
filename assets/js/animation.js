@@ -77,9 +77,11 @@ app.ui = {
     },
 }
 
-$(function () {
-    app.ui.particles();
-});
+$(document).ready(function() {
+    if ($("#particles-js").length > 0) {
+        app.ui.particles();
+    }
+})
 
 var delay = (function(){
     var timer = 0;
