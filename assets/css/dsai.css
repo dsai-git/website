@@ -17,8 +17,10 @@
     box-shadow: none;
 }
 
-.event-title,
-.event-date,
-.event-venue {
-    font-weight: bold !important;
+.prof-pic {
+    border-radius: 50%;
+}
+
+.w-70{
+    width: 70%;
 }
