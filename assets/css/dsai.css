@@ -28,3 +28,22 @@
     margin-right: auto;
 }
 
+.display-5 {
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+.title-team {
+    color: #fff;
+}
+
+.hero-team {
+    background: #bebebe url(/assets/img/team.jpg) center center no-repeat;
+    background-size: cover;
+    height: 30rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
