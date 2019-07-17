@@ -17,7 +17,6 @@
     box-shadow: none;
 }
 
-.card-horizontal {
-    display: flex;
-    flex: 1 1 auto;
+.card {
+    margin-bottom: 30px;
 }
