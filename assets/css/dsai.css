@@ -17,6 +17,10 @@
     box-shadow: none;
 }
 
+.card {
+    margin-bottom: 30px;
+}
+
 .event-title,
 .event-date,
 .event-venue {
