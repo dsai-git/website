@@ -22,3 +22,8 @@
 .event-venue {
     font-weight: bold !important;
 }
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}

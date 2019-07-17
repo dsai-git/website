@@ -20,3 +20,18 @@
 .card {
     margin-bottom: 30px;
 }
+
+.event-title,
+.event-date,
+.event-venue {
+    font-weight: bold !important;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.spacer {
+    padding-bottom: 15px;
+}
