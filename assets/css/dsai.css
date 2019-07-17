@@ -35,3 +35,11 @@
 .spacer {
     padding-bottom: 15px;
 }
+
+.hero-team {
+    background: #bebebe url(/assets/img/team.jpg) center center no-repeat;
+    background-size: cover;
+    height: 40rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
