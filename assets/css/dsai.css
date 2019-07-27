@@ -43,3 +43,8 @@
     padding: 1rem;
     margin-bottom: 3rem;
 }
+
+.prof-pic {
+    width: 120px;
+    border-radius: 50%;
+}
