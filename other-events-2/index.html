@@ -209,6 +209,11 @@
   <!-- End of HubSpot Embed Code -->
   <script>
     $(document).ready(function() {
+
+      $.get( "https://us-central1-dsai-246615.cloudfunctions.net/rest-mongo", function( data ) {
+        console.log("data", data);
+      });
+
       $.getJSON( "//us-central1-dsai-246615.cloudfunctions.net/rest-mongo", function( data ) {
         var items = [];
         
