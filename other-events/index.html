@@ -197,6 +197,7 @@
   </footer>
   <!-- Core -->
   <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/moment/moment.min.js"></script>
   <script src="/assets/vendor/popper/popper.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/vendor/headroom/headroom.min.js"></script>
@@ -218,6 +219,7 @@
           
           item["day"] = day;
           item["month"] = month;
+          
           return item;
         }).sort((a, b) => {
             if (a["month"] > b["month"])  return 1;
@@ -226,10 +228,12 @@
             if (a["day"] > b["day"] && a["month"] == b["month"]) return 1;
             if (a["day"] < b["day"] && a["month"] == b["month"]) return -1;
         });
-        
+
+        console.log(sorted);
+
         items.push( '<div class="row">' );
 
-        $.each( data, function( key, val ) {
+        $.each( sorted, function( key, val ) {
           items.push( '<div class="col-sm-4">' +
                       '  <div class="card">' +
                       '    <img class="card-img-top" src="' + (val.photo_url ? val.photo_url : '/assets/img/300x180.png') + '">' +
