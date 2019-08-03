@@ -211,6 +211,21 @@
     $(document).ready(function() {
       $.getJSON( "//us-central1-dsai-246615.cloudfunctions.net/rest-mongo", function( data ) {
         var items = [];
+        sorted = data.map(item => {
+          var event_date = moment(item.start_time).format('DD/MM/YYYY');
+          var day = parseInt(event_date.split('/')[0]);
+          var month = parseInt(event_date.split('/')[1]);
+          
+          item["day"] = day;
+          item["month"] = month;
+          return item;
+        }).sort((a, b) => {
+            if (a["month"] > b["month"])  return 1;
+            if (a["month"] < b["month"]) return -1;
+            
+            if (a["day"] > b["day"] && a["month"] == b["month"]) return 1;
+            if (a["day"] < b["day"] && a["month"] == b["month"]) return -1;
+        });
         
         items.push( '<div class="row">' );
 
