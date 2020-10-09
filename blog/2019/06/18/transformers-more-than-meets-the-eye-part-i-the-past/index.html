@@ -2,7 +2,7 @@
 <html>
     <head lang="en">
         <title>Transformers: more than meets the eye? (Part 1: The Past) &mdash; DSAI | Data Science and AI Association of Australia Blog</title>
-        <meta name="description" content="DSAI is the trusted voice of the profession. We are the global home for data science professionals.">
+        <meta name="description" content="Data Science and Artificaial Intelligence Association of Australia blog.">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="robots" content="index, follow">
@@ -44,8 +44,8 @@
         <header class="header-global">
             <nav id="navbar-main" class="navbar navbar-main navbar-dark bg-default navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand mr-lg-5" href="/blog/">
-                        <img src="/blog/assets/img/data_science_artificial_intelligence.png"> | BLOG
+                    <a class="navbar-brand mr-lg-5 d-flex align-items-center" href="/blog/">
+                        <img src="/blog/assets/img/data_science_artificial_intelligence.png"> <span>| BLOG</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -71,32 +71,12 @@
                         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                             <li class="nav-item">
                               <a class="nav-link" href="https://dsai.org.au/" data-toggle="tooltip" title="" data-original-title="DSAi Home Page">
-                              Home
+                              DSAi Main Site
                               </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="https://dsai.org.au/blog/" data-toggle="tooltip" title="" data-original-title="DSAi Blog">
-                                Blog
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://dsai.org.au/events/" data-toggle="tooltip" title="" data-original-title="DSAi Events">
-                                Events
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://dsai.org.au/courses/" data-toggle="tooltip" title="" data-original-title="DSAi Events">
-                                Courses
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://dsai.org.au/register-interest/" data-toggle="tooltip" title="" data-original-title="Register Interest in DSAi Events and Opportunities">
-                                Register Interest
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://dsai.org.au/team/" data-toggle="tooltip" title="" data-original-title="DSAi Team">
-                                Team
+                                DSAi Blog Home
                                 </a>
                             </li>
                         </ul>
@@ -177,13 +157,13 @@ Reposted with permission.
 
 <p>The goal of this task is to turn the input (English), into the output (Mandarin). Clearly, the input is just a bunch of words and so is the output. BUT! The order in which they appear matters. To see this in action, the input “do I want to eat vegetables” clearly has a different meaning. Some languages might have less of a problem with this than others, but in any event it’s a real source of information that we want to incorporate when we’re working on this problem. So the challenge is, how to predict a sequence of values - not necessarily words, it could be a financial time series problem you’re working on - using not just the knowledge of the input values but their structure (i.e. order), as well.</p>
 
-<p>Just to briefly emphasise, this general type of problem has existed forever. People creating neural networks didn’t invent this type of problem, only new ways of solving it.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>Just to briefly emphasise, this general type of problem has existed forever. People creating neural networks didn’t invent this type of problem, only new ways of solving it.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref">1</a></sup></p>
 
 <h2 id="important-digression%21">Important digression!</h2>
 
 <p>Looking at the above example and a great deal of explanatory material on the topic of <em>seq2seq</em> problems, there’s a common problem you can encounter. It’s this: the problem looks like the input and output are concurrent, but they actually aren’t.</p>
 
-<p>The way the problem works is, you feed in an input sequence and then want your model to complete the sequence. So really, the input and output pair above should be presented more like this<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<p>The way the problem works is, you feed in an input sequence and then want your model to complete the sequence. So really, the input and output pair above should be presented more like this<sup id="fnref:4"><a href="#fn:4" class="footnote-ref">2</a></sup>:</p>
 
 <blockquote>
   <p>I do want to eat vegetables <strong>BREAK</strong> 我想吃蔬菜</p>
@@ -195,7 +175,7 @@ Reposted with permission.
 
 <h2 id="baby-steps">Baby steps</h2>
 
-<p>Ok so first let’s step back in time.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">3</a></sup> In the beginning (and I mean <em>actually</em> a long time ago, like 40 years or more), we didn’t have any of the gleaming mathematical machinery we now do for working on language problems. So where to start?</p>
+<p>Ok so first let’s step back in time.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref">3</a></sup> In the beginning (and I mean <em>actually</em> a long time ago, like 40 years or more), we didn’t have any of the gleaming mathematical machinery we now do for working on language problems. So where to start?</p>
 
 <h3 id="n-grams">N-grams</h3>
 
@@ -231,7 +211,7 @@ Reposted with permission.
 
 <p>Even worse, the longer your input sequence the rarer it is! In the case of “The weather is”, you might be able to see it a few times in a dataset if you’re lucky. But not as many times as you see “weather is”, perhaps. So we’re stuck in a classic problem where we can get a few edge cases right all of the time, or have hopefully better than random performance over a much broader set of cases, assuming your input doesn’t fundamentally change as time goes on. That’s probably not good enough. So people kept researching stuff.</p>
 
-<h2 id="time-becomes-a-loop%5E3">Time becomes a loop<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">4</a></sup></h2>
+<h2 id="time-becomes-a-loop%5E3">Time becomes a loop<sup id="fnref:3"><a href="#fn:3" class="footnote-ref">4</a></sup></h2>
 
 <p>Another thing that people discovered when talking about <em>seq2seq</em> problems is that sometimes stuff a long time ago in your input sequence actually matters in terms of the prediction you make at the end of it. Doing stuff with N-grams won’t work here because for example a 128-gram is basically unique. You’ll only every see that sequence of tokens the once, if at all, so it’s no use for prediction. So what can you do about this?</p>
 
@@ -251,9 +231,9 @@ Reposted with permission.
 
 <p>So we needed some way of hanging onto not everything but at least some important info from the earlier parts of a potentially long sequence. This is where neural networks start to play a role.</p>
 
-<p>The original go at this involved trying to get a neural network to have a memory of its own, after a fashion.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> I don’t want to go on forever about this because it turns into talking about math, but the long and the short of it was that you wanted a bit of your network to loop around on itself in a way that made some of the information coming in from a given sequence element take a while to get back out again.</p>
+<p>The original go at this involved trying to get a neural network to have a memory of its own, after a fashion.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref">5</a></sup> I don’t want to go on forever about this because it turns into talking about math, but the long and the short of it was that you wanted a bit of your network to loop around on itself in a way that made some of the information coming in from a given sequence element take a while to get back out again.</p>
 
-<p>It’s a bit like Gumbo. <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> This is a slightly weird analogy, but stick with me. Gumbo is this dish you get in the southern parts of the U.S. that takes <em>forever</em> to cook. But the trick is to make it so that the flavour of the ingredients you put in early on is still retained some hours later in the pot when you finally finish cooking, even if you’ve taken that ingredient back out.</p>
+<p>It’s a bit like Gumbo. <sup id="fnref:6"><a href="#fn:6" class="footnote-ref">6</a></sup> This is a slightly weird analogy, but stick with me. Gumbo is this dish you get in the southern parts of the U.S. that takes <em>forever</em> to cook. But the trick is to make it so that the flavour of the ingredients you put in early on is still retained some hours later in the pot when you finally finish cooking, even if you’ve taken that ingredient back out.</p>
 
 <p>In our case, we want to put words in and move on to subsequent parts of the sequence without necessarily losing all of the earlier flavour. By the time we get to the end of that passage I put in above, we still want to be able to have some hint of the earlier part where the speaker says his planet was a moon.</p>
 
@@ -287,32 +267,32 @@ Reposted with permission.
 
 <p>Wouldn’t it make more sense and potentially be faster if we could use all of the bits of the input sequence independently in determining an output, instead of pancaking the information you have up against an invisible wall separating your input sequence and whatever comes next? This question is more or less what the Attention method and Transformers grow out of. I’ll talk about why next time.</p>
 
-<div class="footnotes" role="doc-endnotes">
+<div class="footnotes">
 <hr />
 <ol>
 
-<li id="fn:1" role="doc-endnote">
-<p>Just in case anyone was wondering.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;&#xFE0E;</a></p>
+<li id="fn:1">
+<p>Just in case anyone was wondering.&#160;<a href="#fnref:1" class="footnote-backref">&#8617;</a></p>
 </li>
 
-<li id="fn:4" role="doc-endnote">
-<p>From <em>The Algebraist</em> by Iain M. Banks. R.I.P.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#8617;&#xFE0E;</a></p>
+<li id="fn:4">
+<p>From <em>The Algebraist</em> by Iain M. Banks. R.I.P.&#160;<a href="#fnref:4" class="footnote-backref">&#8617;</a></p>
 </li>
 
-<li id="fn:2" role="doc-endnote">
-<p>This is secretly a joke. If you work out what I’m referring to, I’m not sorry.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#8617;&#xFE0E;</a></p>
+<li id="fn:2">
+<p>This is secretly a joke. If you work out what I’m referring to, I’m not sorry.&#160;<a href="#fnref:2" class="footnote-backref">&#8617;</a></p>
 </li>
 
-<li id="fn:3" role="doc-endnote">
-<p>https://www.youtube.com/watch?v=DNb4VKln1uw&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#8617;&#xFE0E;</a></p>
+<li id="fn:3">
+<p>https://www.youtube.com/watch?v=DNb4VKln1uw&#160;<a href="#fnref:3" class="footnote-backref">&#8617;</a></p>
 </li>
 
-<li id="fn:5" role="doc-endnote">
-<p>Not as cool as anything invented by Miles Bennett Dyson, but still.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#8617;&#xFE0E;</a></p>
+<li id="fn:5">
+<p>Not as cool as anything invented by Miles Bennett Dyson, but still.&#160;<a href="#fnref:5" class="footnote-backref">&#8617;</a></p>
 </li>
 
-<li id="fn:6" role="doc-endnote">
-<p>https://en.wikipedia.org/wiki/Gumbo#Preparation_and_serving&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#8617;&#xFE0E;</a></p>
+<li id="fn:6">
+<p>https://en.wikipedia.org/wiki/Gumbo#Preparation_and_serving&#160;<a href="#fnref:6" class="footnote-backref">&#8617;</a></p>
 </li>
 
 </ol>
@@ -323,7 +303,8 @@ Reposted with permission.
                         <a class="btn btn-sm btn-secondary" role="button" href="/blog/tags/ai/">ai</a>                        </p>
         
                     <nav>
-                                                    <a class="btn btn-primary pull-right" role="button" href="/blog/2019/05/20/machine-learning-jokes//" title="Machine Learning Jokes">Previous: <span class="title">Machine Learning Jokes</span></a>
+                                    <a class="btn btn-primary" role="button" href="/blog/2020/09/10/unprecedented-times-leading-new-conversations-with-data/" title="Unprecedented times – leading new conversations with data">Next: <span class="title">Unprecedented times – leading new conversations with data</span></a>
+                                                    <a class="btn btn-primary pull-right" role="button" href="/blog/2019/05/20/machine-learning-jokes/" title="Machine Learning Jokes">Previous: <span class="title">Machine Learning Jokes</span></a>
                             </nav>
             </article>
 
@@ -360,7 +341,7 @@ Reposted with permission.
                 <div class="row align-items-center justify-content-md-between">
                 <div class="col-md-6">
                     <div class="copyright">
-                        &copy; 2019 DSAI | Data Science and AI Association of Australia
+                        &copy; 2020 DSAI | Data Science and AI Association of Australia
                     </div>
                 </div>
                 </div>
